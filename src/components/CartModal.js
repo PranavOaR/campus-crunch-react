@@ -32,12 +32,12 @@ const CartModal = ({ isOpen, onClose }) => {
           animate={{ x: 0 }}
           exit={{ x: '100%' }}
           transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-          className="absolute right-0 top-0 h-full w-full max-w-md bg-white shadow-xl"
+          className="absolute right-0 top-0 h-full w-full max-w-md bg-white dark:bg-gray-800 shadow-xl transition-colors duration-300"
         >
           <div className="flex flex-col h-full">
             {/* Header */}
-            <div className="flex items-center justify-between p-6 border-b">
-              <h2 className="text-xl font-poppins font-semibold text-gray-900">
+            <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
+              <h2 className="text-xl font-poppins font-semibold text-gray-900 dark:text-white">
                 Shopping Cart
               </h2>
               <button
@@ -66,17 +66,17 @@ const CartModal = ({ isOpen, onClose }) => {
                     <motion.div
                       key={`${item.type}-${item.id}`}
                       layout
-                      className="flex items-center space-x-4 p-4 bg-gray-50 rounded-lg"
+                      className="flex items-center space-x-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg"
                     >
                       <img
                         src={item.image}
                         alt={item.name}
                         className="w-16 h-16 object-cover rounded-lg"
                       />
-                      <div className="flex-1">
-                        <h3 className="font-semibold text-gray-900">{item.name}</h3>
-                        <p className="text-primary-600 font-medium">₹{item.price}</p>
-                      </div>
+                                              <div className="flex-1">
+                          <h3 className="font-semibold text-gray-900 dark:text-white">{item.name}</h3>
+                          <p className="text-primary-600 dark:text-primary-400 font-medium">₹{item.price}</p>
+                        </div>
                       <div className="flex items-center space-x-2">
                         <button
                           onClick={() => updateQuantity(item.id, item.quantity - 1, item.type)}
@@ -112,10 +112,10 @@ const CartModal = ({ isOpen, onClose }) => {
 
             {/* Footer */}
             {items.length > 0 && (
-              <div className="border-t p-6 space-y-4">
+              <div className="border-t border-gray-200 dark:border-gray-700 p-6 space-y-4">
                 <div className="flex justify-between items-center text-lg font-semibold">
-                  <span>Total:</span>
-                  <span className="text-primary-600">₹{getCartTotal()}</span>
+                  <span className="text-gray-900 dark:text-white">Total:</span>
+                  <span className="text-primary-600 dark:text-primary-400">₹{getCartTotal()}</span>
                 </div>
                 <div className="flex space-x-3">
                   <button

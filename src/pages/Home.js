@@ -73,13 +73,13 @@ const Home = () => {
       </section>
 
       {/* Products Section */}
-      <section id="products" className="py-12 md:py-20 bg-gray-50">
+      <section id="products" className="py-12 md:py-20 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
         <div className="container mx-auto px-4 safe-area-inset">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-poppins font-bold text-gray-900 dark:text-white mb-4">
               Our <span className="text-gradient">Popular Products</span>
             </h2>
-            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               Handpicked favorites that keep students energized and satisfied throughout their academic journey.
             </p>
           </div>
@@ -110,11 +110,11 @@ const Home = () => {
                 
                 <div className="space-y-3">
                   <Link to={`/product/${product.id}`}>
-                    <h3 className="text-xl font-poppins font-semibold text-gray-900 group-hover:text-primary-purple transition-colors">
+                    <h3 className="text-xl font-poppins font-semibold text-gray-900 dark:text-white group-hover:text-primary-purple transition-colors">
                       {product.name}
                     </h3>
                   </Link>
-                  <p className="text-gray-600 text-sm line-clamp-2">
+                  <p className="text-gray-600 dark:text-gray-300 text-sm line-clamp-2">
                     {product.description}
                   </p>
                   <div className="flex items-center justify-between">
@@ -136,7 +136,7 @@ const Home = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-12 md:py-20 bg-white">
+      <section className="py-12 md:py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
         <div className="container mx-auto px-4 safe-area-inset">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
@@ -145,8 +145,8 @@ const Home = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-poppins font-semibold mb-2">Quick Energy</h3>
-              <p className="text-gray-600">Instant energy boost for those long study sessions and late-night cramming.</p>
+              <h3 className="text-xl font-poppins font-semibold mb-2 text-gray-900 dark:text-white">Quick Energy</h3>
+              <p className="text-gray-600 dark:text-gray-300">Instant energy boost for those long study sessions and late-night cramming.</p>
             </div>
             
             <div className="text-center">
@@ -155,8 +155,8 @@ const Home = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-poppins font-semibold mb-2">Nutritious</h3>
-              <p className="text-gray-600">Carefully crafted with quality ingredients to fuel your body and mind.</p>
+              <h3 className="text-xl font-poppins font-semibold mb-2 text-gray-900 dark:text-white">Nutritious</h3>
+              <p className="text-gray-600 dark:text-gray-300">Carefully crafted with quality ingredients to fuel your body and mind.</p>
             </div>
             
             <div className="text-center">
@@ -165,8 +165,8 @@ const Home = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-poppins font-semibold mb-2">Fast Delivery</h3>
-              <p className="text-gray-600">Quick delivery right to your dorm or study spot. No time wasted!</p>
+              <h3 className="text-xl font-poppins font-semibold mb-2 text-gray-900 dark:text-white">Fast Delivery</h3>
+              <p className="text-gray-600 dark:text-gray-300">Quick delivery right to your dorm or study spot. No time wasted!</p>
             </div>
           </div>
         </div>

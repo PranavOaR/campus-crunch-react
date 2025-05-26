@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -13,6 +14,10 @@ module.exports = {
         'bg-white': '#fff',
         'text-gray': '#666',
         'border-light': '#e5e5e5',
+        'primary': {
+          400: '#8b5cf6',
+          600: '#5e2a9d',
+        },
       },
       fontFamily: {
         'inter': ['Inter', 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif'],

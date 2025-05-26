@@ -36,7 +36,7 @@
   }
   
   .card {
-    @apply bg-white rounded-xl shadow-card p-6 transition-all duration-300 hover:shadow-xl hover:scale-105;
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-card p-6 transition-all duration-300 hover:shadow-xl hover:scale-105;
   }
   
   .input-field {

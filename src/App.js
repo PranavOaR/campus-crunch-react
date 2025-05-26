@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './contexts/CartContext';
 import { ToastProvider } from './contexts/ToastContext';
+import { ThemeProvider } from './contexts/ThemeContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Toast from './components/Toast';
@@ -16,29 +17,31 @@ import Subscription from './pages/Subscription';
 
 function App() {
   return (
-    <ToastProvider>
-      <CartProvider>
-        <Router>
-          <div className="min-h-screen bg-gray-50">
-            <Header />
-            <main className="pt-16 md:pt-20">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/product/:id" element={<ProductDetail />} />
-                <Route path="/combos" element={<Combos />} />
-                <Route path="/on-the-go" element={<OnTheGo />} />
-                <Route path="/checkout" element={<Checkout />} />
-                <Route path="/delivery" element={<Delivery />} />
-                <Route path="/about" element={<AboutUs />} />
-                <Route path="/subscription" element={<Subscription />} />
-              </Routes>
-            </main>
-            <Footer />
-            <Toast />
-          </div>
-        </Router>
-      </CartProvider>
-    </ToastProvider>
+    <ThemeProvider>
+      <ToastProvider>
+        <CartProvider>
+          <Router>
+            <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+              <Header />
+              <main className="pt-16 md:pt-20">
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/product/:id" element={<ProductDetail />} />
+                  <Route path="/combos" element={<Combos />} />
+                  <Route path="/on-the-go" element={<OnTheGo />} />
+                  <Route path="/checkout" element={<Checkout />} />
+                  <Route path="/delivery" element={<Delivery />} />
+                  <Route path="/about" element={<AboutUs />} />
+                  <Route path="/subscription" element={<Subscription />} />
+                </Routes>
+              </main>
+              <Footer />
+              <Toast />
+            </div>
+          </Router>
+        </CartProvider>
+      </ToastProvider>
+    </ThemeProvider>
   );
 }
 
