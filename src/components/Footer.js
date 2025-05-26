@@ -35,18 +35,18 @@ const Footer = () => {
             {/* Newsletter */}
             <div>
               <h3 className="font-semibold mb-3 text-white">Stay Updated</h3>
-              <form onSubmit={handleNewsletterSubmit} className="flex">
+              <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-2 sm:gap-0">
                 <input
                   type="email"
                   placeholder="Enter your email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 px-4 py-2 rounded-l-lg bg-gray-800 text-white placeholder-gray-400 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-accent-neon-yellow focus:border-transparent"
+                  className="flex-1 px-4 py-2 rounded-lg sm:rounded-l-lg sm:rounded-r-none bg-gray-800 text-white placeholder-gray-400 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-accent-neon-yellow focus:border-transparent"
                   required
                 />
                 <button
                   type="submit"
-                  className="px-6 py-2 bg-accent-neon-yellow text-primary-purple rounded-r-lg font-semibold hover:bg-yellow-400 transition-colors"
+                  className="px-6 py-2 bg-accent-neon-yellow text-primary-purple rounded-lg sm:rounded-l-none sm:rounded-r-lg font-semibold hover:bg-yellow-400 transition-colors touch-manipulation"
                 >
                   Subscribe
                 </button>

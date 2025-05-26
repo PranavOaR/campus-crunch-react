@@ -28,11 +28,11 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-gradient-to-r from-primary-purple to-light-purple text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-purple hover:scale-105 active:scale-95;
+    @apply bg-gradient-to-r from-primary-purple to-light-purple text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-purple hover:scale-105 active:scale-95 touch-manipulation;
   }
   
   .btn-secondary {
-    @apply bg-accent-neon-yellow text-primary-purple px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-yellow-400 hover:shadow-lg;
+    @apply bg-accent-neon-yellow text-primary-purple px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:bg-yellow-400 hover:shadow-lg touch-manipulation;
   }
   
   .card {
@@ -54,6 +54,20 @@
   
   .animate-fade-in-up {
     animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  /* Mobile-specific utilities */
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+  
+  .safe-area-inset {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+  
+  .mobile-scroll {
+    -webkit-overflow-scrolling: touch;
   }
   
   @keyframes fadeInUp {

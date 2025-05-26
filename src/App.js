@@ -21,7 +21,7 @@ function App() {
         <Router>
           <div className="min-h-screen bg-gray-50">
             <Header />
-            <main className="pt-20">
+            <main className="pt-16 md:pt-20">
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/product/:id" element={<ProductDetail />} />
