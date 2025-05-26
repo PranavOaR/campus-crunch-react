@@ -28,14 +28,14 @@ const Combos = () => {
   };
 
   return (
-    <div className="min-h-screen pt-24 pb-12">
+    <div className="min-h-screen pt-24 pb-12 bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="container mx-auto px-4">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-poppins font-bold text-gray-900 mb-6">
+          <h1 className="text-5xl font-poppins font-bold text-gray-900 dark:text-white mb-6">
             Combo <span className="text-gradient">Deals</span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
             Save more with our specially curated combo packs! Perfect combinations of your favorite snacks 
             and meals designed to keep you energized throughout your academic journey.
           </p>
@@ -45,7 +45,7 @@ const Combos = () => {
         {/* Combos Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
           {combos.map((combo) => (
-            <div key={combo.id} className="bg-white rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300">
+            <div key={combo.id} className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300">
               {/* Combo Image */}
               <div className="relative h-64 overflow-hidden">
                 <img
@@ -67,18 +67,18 @@ const Combos = () => {
 
               {/* Combo Details */}
               <div className="p-6">
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
                   {combo.detailedDescription || combo.description}
                 </p>
 
                 {/* Products in Combo */}
                 <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-gray-900 mb-3">Includes:</h4>
+                  <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">Includes:</h4>
                   <div className="grid grid-cols-2 gap-2">
                     {combo.products.map((productId) => {
                       const product = getProductById(productId);
                       return product ? (
-                        <div key={product.id} className="flex items-center space-x-2 p-2 bg-gray-50 rounded-lg">
+                        <div key={product.id} className="flex items-center space-x-2 p-2 bg-gray-50 dark:bg-gray-700 rounded-lg">
                           <img
                             src={product.image}
                             alt={product.name}
@@ -87,7 +87,7 @@ const Combos = () => {
                               e.target.src = '/CampusCrunchLogo.jpeg';
                             }}
                           />
-                          <span className="text-xs text-gray-700 font-medium">{product.name}</span>
+                          <span className="text-xs text-gray-700 dark:text-gray-200 font-medium">{product.name}</span>
                         </div>
                       ) : null;
                     })}
@@ -97,12 +97,12 @@ const Combos = () => {
                 {/* Pricing */}
                 <div className="mb-6">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm text-gray-600">Individual Price:</span>
-                    <span className="text-sm text-gray-500 line-through">₹{combo.originalPrice}</span>
+                    <span className="text-sm text-gray-600 dark:text-gray-300">Individual Price:</span>
+                    <span className="text-sm text-gray-500 dark:text-gray-400 line-through">₹{combo.originalPrice}</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-lg font-semibold text-gray-900">Combo Price:</span>
-                    <span className="text-2xl font-bold text-primary-purple">₹{combo.comboPrice}</span>
+                    <span className="text-lg font-semibold text-gray-900 dark:text-white">Combo Price:</span>
+                    <span className="text-2xl font-bold text-primary-purple dark:text-primary-400">₹{combo.comboPrice}</span>
                   </div>
                   <div className="text-center mt-2">
                     <span className="inline-block bg-green-100 text-green-800 text-sm font-semibold px-3 py-1 rounded-full">
@@ -126,7 +126,7 @@ const Combos = () => {
                         <Link
                           key={product.id}
                           to={`/product/${product.id}`}
-                          className="text-xs text-primary-purple hover:text-light-purple text-center py-2 border border-primary-purple rounded-lg hover:bg-primary-purple hover:text-white transition-colors"
+                          className="text-xs text-primary-purple dark:text-primary-400 hover:text-light-purple text-center py-2 border border-primary-purple dark:border-primary-400 rounded-lg hover:bg-primary-purple hover:text-white transition-colors"
                         >
                           View {product.name}
                         </Link>
@@ -175,10 +175,10 @@ const Combos = () => {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <h2 className="text-3xl font-poppins font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl font-poppins font-bold text-gray-900 dark:text-white mb-4">
             Can't Find What You're Looking For?
           </h2>
-          <p className="text-xl text-gray-600 mb-8">
+          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
             Browse our individual products to create your own perfect combination!
           </p>
           <Link to="/" className="btn-primary">

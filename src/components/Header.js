@@ -160,12 +160,12 @@ const Header = () => {
 
                 {/* Desktop Search Dropdown */}
                 {showSearchDropdown && searchResults.length > 0 && (
-                  <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-lg shadow-xl border border-gray-200 max-h-96 overflow-y-auto z-50">
+                  <div className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 max-h-96 overflow-y-auto z-50">
                     {searchResults.map((product) => (
                       <div
                         key={product.id}
                         onClick={() => handleProductSelect(product.id)}
-                        className="flex items-center p-3 hover:bg-gray-50 cursor-pointer border-b border-gray-100 last:border-b-0"
+                        className="flex items-center p-3 hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer border-b border-gray-100 dark:border-gray-700 last:border-b-0"
                       >
                         <img
                           src={product.image}
@@ -176,9 +176,9 @@ const Header = () => {
                           }}
                         />
                         <div className="flex-1">
-                          <h4 className="font-semibold text-gray-900">{product.name}</h4>
-                          <p className="text-sm text-gray-600 truncate">{product.description}</p>
-                          <p className="text-sm font-bold text-primary-purple">₹{product.price}</p>
+                          <h4 className="font-semibold text-gray-900 dark:text-white">{product.name}</h4>
+                          <p className="text-sm text-gray-600 dark:text-gray-300 truncate">{product.description}</p>
+                          <p className="text-sm font-bold text-primary-purple dark:text-primary-400">₹{product.price}</p>
                         </div>
                       </div>
                     ))}
@@ -305,12 +305,12 @@ const Header = () => {
 
               {/* Mobile Search Dropdown */}
               {showSearchDropdown && searchResults.length > 0 && (
-                <div className="mt-2 bg-white rounded-lg shadow-xl border border-gray-200 max-h-64 overflow-y-auto">
+                <div className="mt-2 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 max-h-64 overflow-y-auto">
                   {searchResults.map((product) => (
                     <div
                       key={product.id}
                       onClick={() => handleProductSelect(product.id)}
-                      className="flex items-center p-3 hover:bg-gray-50 cursor-pointer border-b border-gray-100 last:border-b-0"
+                      className="flex items-center p-3 hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer border-b border-gray-100 dark:border-gray-700 last:border-b-0"
                     >
                       <img
                         src={product.image}
@@ -321,9 +321,9 @@ const Header = () => {
                         }}
                       />
                       <div className="flex-1">
-                        <h4 className="font-semibold text-gray-900 text-sm">{product.name}</h4>
-                        <p className="text-xs text-gray-600 truncate">{product.description}</p>
-                        <p className="text-sm font-bold text-primary-purple">₹{product.price}</p>
+                        <h4 className="font-semibold text-gray-900 dark:text-white text-sm">{product.name}</h4>
+                        <p className="text-xs text-gray-600 dark:text-gray-300 truncate">{product.description}</p>
+                        <p className="text-sm font-bold text-primary-purple dark:text-primary-400">₹{product.price}</p>
                       </div>
                     </div>
                   ))}

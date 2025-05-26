@@ -102,7 +102,7 @@ const Home = () => {
                         e.target.src = '/CampusCrunchLogo.jpeg';
                       }}
                     />
-                    <div className="absolute top-2 right-2 bg-primary-purple text-white px-2 py-1 rounded-full text-sm font-semibold">
+                    <div className="absolute top-2 right-2 bg-primary-purple dark:bg-primary-600 text-white px-2 py-1 rounded-full text-sm font-semibold">
                       ₹{product.price}
                     </div>
                   </div>
@@ -110,7 +110,7 @@ const Home = () => {
                 
                 <div className="space-y-3">
                   <Link to={`/product/${product.id}`}>
-                    <h3 className="text-xl font-poppins font-semibold text-gray-900 dark:text-white group-hover:text-primary-purple transition-colors">
+                    <h3 className="text-xl font-poppins font-semibold text-gray-900 dark:text-white group-hover:text-primary-purple dark:group-hover:text-primary-400 transition-colors">
                       {product.name}
                     </h3>
                   </Link>
@@ -118,7 +118,7 @@ const Home = () => {
                     {product.description}
                   </p>
                   <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-primary-purple">
+                    <span className="text-2xl font-bold text-primary-purple dark:text-primary-400">
                       ₹{product.price}
                     </span>
                     <button
